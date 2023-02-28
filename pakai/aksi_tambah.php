@@ -7,13 +7,7 @@ if(isset($_POST['simpan'])){
     $tipe = $_POST['tipe'];
     $awal = $_POST['awal'];
     $akhir = $_POST['akhir'];
-    //$proses= mysqli_query($koneksi,"select * from penggunaan WHERE id_aset = '$aset'");
-    //$data_aset = mysqli_fetch_array($proses);
-    //$cek = mysqli_num_rows($proses);
-
-    //if($cek>0){
-        //echo "<script>window.alert('Aset Sudah Terdaftar')window.location='data_pakai.php'</script>";
-    //}else {
+    
     $query = "insert into penggunaan(id_aset,atas_nama,tipe,npwp,tanggal_mulai,tanggal_akhir) 
                             values ('$aset','$nama','$tipe','$npwp','$awal','$akhir')";
     if(mysqli_query($konek, $query)){
